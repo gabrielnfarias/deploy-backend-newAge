@@ -13,7 +13,7 @@
     "node": ">=16.x.x"
   },
   "scripts": {
-    "start": "node ./index.js",
+    "start": "node ./src/index.js",
     "build:prod": "webpack --mode=production"
   },
   "devDependencies": {
