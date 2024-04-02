@@ -7,8 +7,8 @@ const cors = require("cors");
 const app = express();
 const db = knex(knexConfig);
 
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
 app.post("/submit", async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
