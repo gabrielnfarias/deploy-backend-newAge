@@ -12,6 +12,7 @@ app.use(express.json());
 
 app.post("/submit", async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
+
   const { nome, email, celular, cpf, regiao } = req.body;
   try {
     await db("clientes").insert({ nome, email, celular, cpf, regiao });
