@@ -7,8 +7,8 @@ const cors = require("cors");
 const app = express();
 const db = knex(knexConfig);
 
-app.use(cors());
 app.use(express.json());
+app.use(cors());
 
 app.post("/submit", async (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -23,5 +23,4 @@ app.post("/submit", async (req, res) => {
       .send("Ocorreu um erro ao inserir os dados no banco de dados.");
   }
 });
-
 app.listen(process.env.PORT || 3000, () => {});
